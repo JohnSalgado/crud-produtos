@@ -1,10 +1,10 @@
 const express = require('express');
 const Produto = require('./models/produto');
-
+const cors = require('cors');
 const server = express();
 
 require('dotenv').config();
-
+server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
